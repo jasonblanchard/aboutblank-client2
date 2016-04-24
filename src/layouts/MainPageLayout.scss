@@ -1,0 +1,81 @@
+@import '../scss/site-mixins';
+
+.MainPageLayout-header {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+}
+
+.MainPageLayout-links {
+  display: flex;
+
+  > * {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    color: $gray;
+    font-size: 35px;
+    transition: color .15s;
+
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+.MainPageLayout-githubLink::after {
+  font-family: 'FontAwesome';
+  content: $fa-var-github;
+}
+
+.MainPageLayout-twitterLink::after {
+  font-family: 'FontAwesome';
+  content: $fa-var-twitter;
+}
+
+.MainPageLayout-linkedinLink::after {
+  font-family: 'FontAwesome';
+  content: $fa-var-linkedin;
+}
+
+.MainPageLayout-subtitle {
+  color: $gray;
+  font-family: "raleway", sans-serif;
+}
+
+.MainPageLayout-nav {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+
+  > * {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    border-bottom: 3px solid $white;
+    transition: color .15s;
+
+    &:hover {
+      border-bottom: 3px solid $gray;
+    }
+
+    &.active {
+      border-bottom: 3px solid $blue;
+      font-weight: bold;
+
+      &:hover {
+        border-bottom: 3px solid $gray;
+      }
+    }
+  }
+}

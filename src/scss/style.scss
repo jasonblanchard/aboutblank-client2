@@ -1,0 +1,31 @@
+@import './site-mixins';
+
+body {
+  background: $white;
+  color: $black;
+  font-family: "raleway", sans-serif;
+  margin: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
+  margin: 0;
+}
+
+a, a:visited {
+  color: $blue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $gray;
+}
+
+p {
+  font-family: "lato", sans-serif;
+  margin: 0;
+}
+
+.sr-only {
+  @include sr-only
+}
