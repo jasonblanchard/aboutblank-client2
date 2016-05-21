@@ -15,9 +15,9 @@ export default class Root extends Component {
   }
 
   render() {
-    const className = classNames(`Root-animate-${this._getAnimationDirection()}`);
+    const className = classNames('Root-animation-wrapper', `Root-animate-${this._getAnimationDirection()}`);
     return (
-      <MainPageLayout className={className}>
+      <MainPageLayout className="Root">
         <ReactCSSTransitionGroup
           component="div"
           transitionName="Root"
@@ -26,7 +26,7 @@ export default class Root extends Component {
           transitionAppearTimeout={500}
           transitionAppear
           role="main"
-          className="Root-animation-wrapper"
+          className={className}
         >
           {React.cloneElement(this.props.children, {
             key: this.props.location.pathname,
