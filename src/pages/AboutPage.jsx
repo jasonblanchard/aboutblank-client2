@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import MainPageLayout from '../layouts/MainPageLayout';
 
 export default class AboutPage extends Component {
   render() {
     return (
-      <MainPageLayout className="AboutPage">
-        <section role="main">
-          <p>about</p>
-        </section>
-      </MainPageLayout>
+      <section>
+        <p>about</p>
+        <p> Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+      </section>
     );
   }
 }

@@ -1,0 +1,50 @@
+.Root-enter-active {
+  animation: animate-in-right 3.5s 1;
+}
+
+.Root-leave-active {
+    animation: animate-out-right 3.5s 1;
+}
+
+.Root-animation-wrapper {
+  > * {
+    position: absolute;
+  }
+}
+
+@keyframes animate-in-left {
+  0% {
+    transform: translateX(100%);
+
+  }
+  14.28% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes animate-out-left {
+  0% {
+    transform: translateX(0);
+  }
+  14.28% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animate-in-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  14.28% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes animate-out-right {
+  0% {
+    transform: translateX(0);
+  }
+  14.28% {
+    transform: translateX(100%);
+  }
+}
