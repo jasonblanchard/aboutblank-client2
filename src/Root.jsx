@@ -14,7 +14,7 @@ export default class Root extends Component {
   render() {
     return (
       <MainPageLayout className="Root">
-        <SideRevealLayout direction={this._getAnimationDirection()} >
+        <SideRevealLayout direction={this._getAnimationDirection()}>
           {React.cloneElement(this.props.children, {
             key: this.props.location.pathname,
           })}
