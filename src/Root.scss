@@ -1,14 +1,26 @@
-.Root-enter-active {
-  animation: animate-in-right 3.5s 1;
-}
-
-.Root-leave-active {
-    animation: animate-out-right 3.5s 1;
-}
-
 .Root-animation-wrapper {
   > * {
     position: absolute;
+  }
+}
+
+.Root-animate-right {
+  .Root-enter-active {
+    animation: animate-in-right 3.5s 1;
+  }
+
+  .Root-leave-active {
+    animation: animate-out-right 3.5s 1;
+  }
+}
+
+.Root-animate-left {
+  .Root-enter-active {
+    animation: animate-in-left 3.5s 1;
+  }
+
+  .Root-leave-active {
+    animation: animate-out-left 3.5s 1;
   }
 }
 
