@@ -1,25 +1,25 @@
-.Root-animation-wrapper {
+.SideRevealLayout {
   > * {
     position: absolute;
   }
 }
 
-.Root-animate-right {
-  .Root-enter-active {
+.SideRevealLayout-animate-right {
+  .SideRevealLayout-enter-active {
     animation: animate-in-right 3.5s 1;
   }
 
-  .Root-leave-active {
+  .SideRevealLayout-leave-active {
     animation: animate-out-right 3.5s 1;
   }
 }
 
-.Root-animate-left {
-  .Root-enter-active {
+.SideRevealLayout-animate-left {
+  .SideRevealLayout-enter-active {
     animation: animate-in-left 3.5s 1;
   }
 
-  .Root-leave-active {
+  .SideRevealLayout-leave-active {
     animation: animate-out-left 3.5s 1;
   }
 }

@@ -1,10 +1,7 @@
-import classNames from 'classnames';
 import React, { Component, PropTypes } from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import MainPageLayout from './layouts/MainPageLayout';
-
-import './Root.scss';
+import SideRevealLayout from './layouts/SideRevealLayout';
 
 export default class Root extends Component {
   constructor(props) {
@@ -15,23 +12,13 @@ export default class Root extends Component {
   }
 
   render() {
-    const className = classNames('Root-animation-wrapper', `Root-animate-${this._getAnimationDirection()}`);
     return (
       <MainPageLayout className="Root">
-        <ReactCSSTransitionGroup
-          component="div"
-          transitionName="Root"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={500}
-          transitionAppearTimeout={500}
-          transitionAppear
-          role="main"
-          className={className}
-        >
+        <SideRevealLayout direction={this._getAnimationDirection()} >
           {React.cloneElement(this.props.children, {
             key: this.props.location.pathname,
           })}
-        </ReactCSSTransitionGroup>
+        </SideRevealLayout>
       </MainPageLayout>
     );
   }
