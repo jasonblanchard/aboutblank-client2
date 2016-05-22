@@ -1,0 +1,36 @@
+@import '../scss/colors';
+
+.ProjectsPage-project {
+  display: flex;
+  margin-bottom: 30px;
+
+  > * {
+    flex: 1;
+  }
+
+  > *:first-child {
+    margin-right: 10px;
+  }
+
+  > *:last-child {
+    margin-left: 10px;
+  }
+}
+
+.ProjectsPage-projectScreenshot {
+  img {
+    width: 100%;
+  }
+}
+
+.ProjectsPage-projectDetails {
+  p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.ProjectsPage-projectLinks {
+  color: $gray;
+  font-size: 13px;
+}

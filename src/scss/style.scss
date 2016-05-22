@@ -29,3 +29,7 @@ p {
 .sr-only {
   @include sr-only
 }
+
+[role='main'] {
+  position: relative;
+}

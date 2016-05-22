@@ -1,0 +1,29 @@
+.BrowserWindowLayout {
+  padding: 20px 0 0;
+  border-radius: 3px;
+  border-bottom: 2px solid #ccc;
+  background: #ddd;
+  display: inline-block;
+  position: relative;
+  line-height: 0;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.BrowserWindowLayout-frame {
+  display: block;
+  height: 15px;
+  position: absolute;
+  top: 5px;
+  left: 1px;
+}
+
+.BrowserWindowLayout span {
+  height: 12px;
+  width: 12px;
+  border-radius: 12px;
+  background-color: #eee;
+  border: 1px solid #dadada;
+  float: left;
+  margin: -1px 0 0 4px;
+}

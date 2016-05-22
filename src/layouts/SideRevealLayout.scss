@@ -1,11 +1,17 @@
 .SideRevealLayout {
   > * {
     position: absolute;
+    width: 100%;
   }
+}
+
+.SideRevealLayout-enter {
+   opacity: 0;
 }
 
 .SideRevealLayout-animate-right {
   .SideRevealLayout-enter-active {
+    opacity: 1;
     animation: animate-in-right 3.5s 1;
   }
 
@@ -16,6 +22,7 @@
 
 .SideRevealLayout-animate-left {
   .SideRevealLayout-enter-active {
+    opacity: 1;
     animation: animate-in-left 3.5s 1;
   }
 
