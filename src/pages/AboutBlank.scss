@@ -1,0 +1,23 @@
+.AboutPage {
+  display: flex;
+}
+
+.AboutPage-bio {
+  flex: 1;
+  margin-right: 40px;
+
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.AboutPage-timeline {
+  flex: 2;
+}
