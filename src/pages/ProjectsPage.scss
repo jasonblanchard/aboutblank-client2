@@ -1,4 +1,4 @@
-@import '../scss/colors';
+@import '../scss/site-mixins';
 
 .ProjectsPage-project {
   display: flex;
@@ -33,4 +33,16 @@
 .ProjectsPage-projectLinks {
   color: $gray;
   font-size: 13px;
+}
+
+.ProjectsPage-projectLinkWeb::before {
+  font-family: 'FontAwesome';
+  content: $fa-var-link;
+  margin-right: 5px;
+}
+
+.ProjectsPage-projectLinkSource::before {
+  font-family: 'FontAwesome';
+  content: $fa-var-code;
+  margin-right: 5px;
 }
