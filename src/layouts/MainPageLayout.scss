@@ -80,3 +80,16 @@
     }
   }
 }
+
+@media (max-width: $breakpoint-medium) {
+  .MainPageLayout-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .MainPageLayout-branding {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

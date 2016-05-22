@@ -10,3 +10,4 @@ $fa-font-path: '../../node_modules/font-awesome/fonts';
   src: url('#{$fa-font-path}/fontawesome-webfont.woff?v=#{$fa-version}') format('woff');
 }
 @import 'font-awesome/scss/core';
+$breakpoint-medium: 1024px;

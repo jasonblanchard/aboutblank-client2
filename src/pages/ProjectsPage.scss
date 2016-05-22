@@ -33,6 +33,7 @@
 .ProjectsPage-projectLinks {
   color: $gray;
   font-size: 13px;
+  margin-bottom: 10px;
 }
 
 .ProjectsPage-projectLinkWeb::before {
@@ -45,4 +46,10 @@
   font-family: 'FontAwesome';
   content: $fa-var-code;
   margin-right: 5px;
+}
+
+@media (max-width: $breakpoint-medium) {
+  .ProjectsPage-project {
+    flex-direction: column-reverse;
+  }
 }
