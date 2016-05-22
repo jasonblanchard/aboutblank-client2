@@ -12,58 +12,58 @@
 .SideRevealLayout-animate-right {
   .SideRevealLayout-enter-active {
     opacity: 1;
-    animation: animate-in-right 3.5s 1;
+    animation: animate-in-right .3s 1;
   }
 
   .SideRevealLayout-leave-active {
-    animation: animate-out-right 3.5s 1;
+    animation: animate-out-right .3s 1;
   }
 }
 
 .SideRevealLayout-animate-left {
   .SideRevealLayout-enter-active {
     opacity: 1;
-    animation: animate-in-left 3.5s 1;
+    animation: animate-in-left .3s 1;
   }
 
   .SideRevealLayout-leave-active {
-    animation: animate-out-left 3.5s 1;
+    animation: animate-out-left .3s 1;
   }
 }
 
 @keyframes animate-in-left {
-  0% {
+  from {
     transform: translateX(100%);
 
   }
-  14.28% {
+  to {
     transform: translateX(0);
   }
 }
 
 @keyframes animate-out-left {
-  0% {
+  from {
     transform: translateX(0);
   }
-  14.28% {
+  to {
     transform: translateX(-100%);
   }
 }
 
 @keyframes animate-in-right {
-  0% {
+  from {
     transform: translateX(-100%);
   }
-  14.28% {
+  to {
     transform: translateX(0);
   }
 }
 
 @keyframes animate-out-right {
-  0% {
+  from {
     transform: translateX(0);
   }
-  14.28% {
+  to {
     transform: translateX(100%);
   }
 }
