@@ -25,6 +25,13 @@ export default class FeedPageHandler extends Component {
   }
 
   render() {
+    if (this.state.feedItems.length === 0) {
+      return (
+        <div>
+          <img alt="loading" src="public/ajax-loader.gif"/> Waking up the server and loading feed...
+        </div>
+      );
+    }
     return <FeedPage feedItems={this.state.feedItems} />;
   }
 
