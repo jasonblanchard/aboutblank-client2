@@ -1,12 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 export default class FeedPage extends Component {
   render() {
     return (
       <section>
-        <p>feed</p>
-        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+        {this.props.feedItems.map(this.renderFeedItem)}
       </section>
     );
   }
+
+  renderFeedItem(feedItem, index) {
+    return (
+      <div key={index}>
+        {feedItem.title}
+      </div>
+    );
+  }
 }
+
+FeedPage.propTypes = {
+  feedItems: PropTypes.array,
+};
