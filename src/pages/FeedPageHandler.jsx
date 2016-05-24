@@ -2,6 +2,8 @@ import superagentPromise from 'superagent-promise';
 import superagent from 'superagent';
 import React, { Component } from 'react';
 
+import FeedPageLoading from './FeedPageLoading';
+
 const agent = superagentPromise(superagent, Promise);
 
 import FeedPage from './FeedPage';
@@ -26,11 +28,7 @@ export default class FeedPageHandler extends Component {
 
   render() {
     if (this.state.feedItems.length === 0) {
-      return (
-        <div>
-          <img alt="loading" src="images/ajax-loader.gif" /> Waking up the server and loading feed...
-        </div>
-      );
+      return <FeedPageLoading />;
     }
     return <FeedPage feedItems={this.state.feedItems} />;
   }
