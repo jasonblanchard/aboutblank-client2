@@ -1,0 +1,34 @@
+@import '../scss/site-mixins';
+
+@mixin FeedPage-feedItemIcon($content) {
+  color: $black;
+  content: $content;
+  font-family: 'FontAwesome';
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.FeedPage-feedItem {
+  margin: 20px 0;
+  color: $gray;
+
+  a {
+    font-weight: bold;
+  }
+
+  &.github_star_events::before {
+    @include FeedPage-feedItemIcon($fa-var-star);
+  }
+
+  &.goodreads_events::before {
+    @include FeedPage-feedItemIcon($fa-var-book);
+  }
+
+  &.github_project_events::before {
+    @include FeedPage-feedItemIcon($fa-var-github-alt);
+  }
+
+  &.delicious_events::before {
+    @include FeedPage-feedItemIcon($fa-var-delicious);
+  }
+}

@@ -7,7 +7,7 @@ export default class AboutPage extends Component {
     return (
       <section className="AboutPage">
         <div className="AboutPage-bio">
-          <img alt="profile" src="public/profile.png" />
+          <img alt="profile" src="images/profile.png" />
           <p>I am a Web developer and instructional technologist crafting tools and ideas that empower learners in a networked world.</p>
           <p>Technologies that are exciting to me right now include <strong>Node.js</strong> and <strong>React</strong>.</p>
           <p>I'm also a contributer to GitLab and other open source projects.</p>
