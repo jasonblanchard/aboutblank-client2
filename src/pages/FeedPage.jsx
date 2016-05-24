@@ -1,3 +1,4 @@
+import capitalize from 'lodash.capitalize';
 import classNames from 'classnames';
 import moment from 'moment';
 import React, { Component, PropTypes } from 'react';
@@ -23,13 +24,21 @@ export default class FeedPage extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      filter: 'all',
+    };
+
     this.renderFeedItem = this.renderFeedItem.bind(this);
+    this.renderFeedFilter = this.renderFeedFilter.bind(this);
   }
 
   render() {
     return (
-      <section>
-        {this.props.feedItems.map(this.renderFeedItem)}
+      <section className="FeedPage">
+        <div className="FeedPage-filterInputs">
+          {['all', ...Object.keys(feedItemTypes)].map(this.renderFeedFilter)}
+        </div>
+        {this._filteredFeedItems().map(this.renderFeedItem)}
       </section>
     );
   }
@@ -46,11 +55,29 @@ export default class FeedPage extends Component {
     );
   }
 
+  renderFeedFilter(filter) {
+    const className = classNames('FeedPage-filterLabel', filter);
+    return (
+      <span className="FeedPage-filterInput" key={filter}>
+        <input type="radio" id={filter} name="FeedPage-filter" onChange={this.onChangeFilter.bind(this, filter)} /> <label className={className} htmlFor={filter}>{filter.replace(/_/g, ' ').split(' ').map(s => capitalize(s)).join(' ')}</label>
+      </span>
+    );
+  }
+
   renderImage(feedItem) {
     if (feedItem.image_url === null) return;
     return (
       <img alt={feedItem.title} src={feedItem.image_url} />
     );
+  }
+
+  onChangeFilter(filter) {
+    this.setState({ filter });
+  }
+
+  _filteredFeedItems() {
+    if (this.state.filter === 'all') return this.props.feedItems;
+    return this.props.feedItems.filter(feedItem => feedItem.type === this.state.filter);
   }
 }
 

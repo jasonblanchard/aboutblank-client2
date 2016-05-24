@@ -1,11 +1,26 @@
 @import '../scss/site-mixins';
 
 @mixin FeedPage-feedItemIcon($content) {
-  color: $black;
   content: $content;
   font-family: 'FontAwesome';
-  font-size: 20px;
-  margin-right: 10px;
+}
+
+.FeedPage-filterInputs {
+  color: $gray;
+  transition: color .25s;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+.FeedPage-filterInput {
+  margin-right: 15px;
+}
+
+.FeedPage-filterLabel::before {
+  font-size: 14px;
+  margin-right: 5px;
 }
 
 .FeedPage-feedItem {
@@ -21,20 +36,30 @@
   a {
     font-weight: bold;
   }
+}
 
-  &.github_star_events::before {
+.FeedPage {
+  .github_star_events::before {
     @include FeedPage-feedItemIcon($fa-var-star);
   }
 
-  &.goodreads_events::before {
+  .goodreads_events::before {
     @include FeedPage-feedItemIcon($fa-var-book);
   }
 
-  &.github_project_events::before {
+  .github_project_events::before {
     @include FeedPage-feedItemIcon($fa-var-github-alt);
   }
 
-  &.delicious_events::before {
+  .delicious_events::before {
     @include FeedPage-feedItemIcon($fa-var-delicious);
+  }
+}
+
+.FeedPage-feedItem {
+  &::before {
+    color: $black;
+    font-size: 20px;
+    margin-right: 10px;
   }
 }
