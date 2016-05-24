@@ -38,7 +38,9 @@ export default class FeedPage extends Component {
     const className = classNames('FeedPage-feedItem', feedItem.type);
     return (
       <div className={className} key={index}>
-        {feedItemTypes[feedItem.type].prefix} <a href={feedItem.url} target="_blank">{feedItem.title}</a> {moment(feedItem.happened_at).fromNow()}
+        <div>
+          {feedItemTypes[feedItem.type].prefix} <a href={feedItem.url} target="_blank">{feedItem.title}</a> {moment(feedItem.happened_at).fromNow()}
+        </div>
         {this.renderImage(feedItem)}
       </div>
     );
@@ -47,9 +49,7 @@ export default class FeedPage extends Component {
   renderImage(feedItem) {
     if (feedItem.image_url === null) return;
     return (
-      <div>
-        <img alt={feedItem.title} src={feedItem.image_url} />
-      </div>
+      <img alt={feedItem.title} src={feedItem.image_url} />
     );
   }
 }

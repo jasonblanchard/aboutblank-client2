@@ -11,6 +11,12 @@
 .FeedPage-feedItem {
   margin: 20px 0;
   color: $gray;
+  display: flex;
+  align-items: center;
+
+  > *:first-child {
+    margin-right: 10px;
+  }
 
   a {
     font-weight: bold;
