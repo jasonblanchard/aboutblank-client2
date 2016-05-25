@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "http-server",
+    "start": "http-server build",
     "watch": "webpack --watch",
     "source": "babel-node ./scripts/processSourceText.js",
     "build": "webpack",
