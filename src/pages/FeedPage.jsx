@@ -1,4 +1,3 @@
-import capitalize from 'lodash.capitalize';
 import classNames from 'classnames';
 import moment from 'moment';
 import React, { Component, PropTypes } from 'react';
@@ -8,15 +7,19 @@ import './FeedPage.scss';
 const feedItemTypes = {
   github_star_events: {
     prefix: 'Starred a repository',
+    label: 'Github Stars',
   },
   goodreads_events: {
     prefix: 'Started reading',
+    label: 'Goodreads Bookshelf',
   },
   github_project_events: {
     prefix: 'Created a new project',
+    label: 'Github Projects',
   },
   delicious_events: {
     prefix: 'Bookmarked',
+    label: 'Bookmarks',
   },
 };
 
@@ -59,7 +62,7 @@ export default class FeedPage extends Component {
     const className = classNames('FeedPage-filterLabel', filter);
     return (
       <span className="FeedPage-filterInput" key={filter}>
-        <input type="radio" id={filter} name="FeedPage-filter" onChange={this.onChangeFilter.bind(this, filter)} /> <label className={className} htmlFor={filter}>{filter.replace(/_/g, ' ').split(' ').map(s => capitalize(s)).join(' ')}</label>
+        <input type="radio" id={filter} name="FeedPage-filter" onChange={this.onChangeFilter.bind(this, filter)} /> <label className={className} htmlFor={filter}>{feedItemTypes[filter] ? feedItemTypes[filter].label : 'All'}</label>
       </span>
     );
   }
