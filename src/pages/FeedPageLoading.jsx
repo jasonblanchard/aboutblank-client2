@@ -7,7 +7,7 @@ export default class FeedPageLoading extends Component {
   render() {
     return (
       <div>
-        <img alt="loading" src="images/ajax-loader.gif" /> Waking up the server and loading feed...
+        <img alt="loading" src="/images/ajax-loader.gif" /> Waking up the server and loading feed...
         <div className="FeedPageLoading-shadows">
           {times(20).map(this.renderShadow)}
         </div>

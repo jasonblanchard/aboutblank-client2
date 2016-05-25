@@ -9,21 +9,21 @@ const projects = [
     description: 'Sourced from the writings of Alexander Hamilton, "Hamilipsum" is a lorem ipsum generator for designers and developers.',
     web: 'http://hamilipsum.com/',
     source: 'https://github.com/jasonblanchard/hamilipsum',
-    image: 'images/hamilipsum.png',
+    image: '/images/hamilipsum.png',
   },
   {
     title: 'Imperfect Tense',
     description: '"Imperfect Tense" is a short story written by Thom Dunn. We collaborated on a user interface that both simplifies and exaggerates the complex structure of the story using multiple strands of concurrent footnotes.',
     web: 'http://jasonblanchard.github.io/imperfect-tense/',
     source: 'https://github.com/jasonblanchard/imperfect-tense',
-    image: 'images/imperfect_tense.png',
+    image: '/images/imperfect_tense.png',
   },
   {
     title: 'Writermortis',
     description: 'Writermortis is an online writing game that works like an "exquisite corpse" - one writer begins the story and sends it to other writers. Each subsequent writer can only see the previously written section. Writermortis is currently a Ruby on Rails app but is going through an extensive re-write in Ember.js.',
     web: 'http://www.writermortis.com/',
     source: 'https://github.com/jasonblanchard/writermortis',
-    image: 'images/writermortis.png',
+    image: '/images/writermortis.png',
   },
 ];
 
