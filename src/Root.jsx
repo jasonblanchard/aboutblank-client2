@@ -34,6 +34,7 @@ export default class Root extends Component {
   _getAnimationDirection() {
     const menuPathnames = ['/about', '/feed', '/projects'];
     if (this.props.location.pathname === this.state.previousPath) return null;
+    if (!this.state.previousPath) return 'right';
     if (menuPathnames.indexOf(this.state.previousPath) < menuPathnames.indexOf(this.props.location.pathname)) {
       return 'left';
     }

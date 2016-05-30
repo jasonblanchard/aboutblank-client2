@@ -1,5 +1,6 @@
 import superagentPromise from 'superagent-promise';
 import superagent from 'superagent';
+// import superagent from 'superagent/lib/client';
 import React, { Component } from 'react';
 
 import FeedPageLoading from './FeedPageLoading';

@@ -7,7 +7,7 @@
     "start": "http-server build",
     "watch": "webpack --watch",
     "source": "babel-node ./scripts/processSourceText.js",
-    "build": "webpack",
+    "build": "webpack && webpack --config webpack.server.js && node scripts/pageBuilder.compiled.js",
     "lint": "eslint src lib"
   },
   "author": "",
@@ -21,7 +21,7 @@
     "react-addons-css-transition-group": "^15.0.1",
     "react-dom": "^15.0.1",
     "react-router": "^2.3.0",
-    "superagent": "^2.0.0-alpha.3",
+    "superagent": "^1.7.2",
     "superagent-promise": "^1.1.0"
   },
   "devDependencies": {
@@ -41,7 +41,11 @@
     "eslint-plugin-react": "^5.0.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
+    "json-loader": "^0.5.4",
+    "lodash.times": "^4.2.0",
     "node-sass": "^3.5.3",
+    "null-loader": "^0.1.1",
+    "proxyquire": "^1.7.9",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.0"
